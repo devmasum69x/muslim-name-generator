@@ -1,6 +1,7 @@
 jdk:
   - openjdk11
 before_install:
+  - chmod +x gradlew
   - ./gradlew clean
 install:
-  - ./gradlew :MuslimNameGenerator:build :MuslimNameGenerator:publishToMavenLocal
+  - ./gradlew :MuslimNameGenerator:build :MuslimNameGenerator:publishToMavenLocal -x test
