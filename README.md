@@ -20,10 +20,11 @@ A powerful and easy-to-use Android library for generating authentic Muslim names
 
 Add JitPack repository to your root `build.gradle` at the end of repositories:
 
-```groovy
-allprojects {
+```
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        ...
+        mavenCentral()
         maven { url 'https://jitpack.io' }
     }
 }
